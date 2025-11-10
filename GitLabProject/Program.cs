@@ -6,36 +6,41 @@ namespace GitLabProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("==================================");
-            Console.WriteLine("Laboratory work on Git");
-            Console.WriteLine("==================================\n");
+            Console.WriteLine("======================================");
+            Console.WriteLine("    Лабораторна робота по Git");
+            Console.WriteLine("         КАЛЬКУЛЯТОР");
+            Console.WriteLine("======================================\n");
 
-            Console.Write("Enter the first number: ");
+            Console.Write("Введіть перше число: ");
             double num1 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Enter the second number: ");
+            Console.Write("Введіть друге число: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
 
+            // Обчислення результатів
             double sum = num1 + num2;
             double difference = num1 - num2;
             double product = num1 * num2;
 
-            Console.WriteLine($"\nResults:");
-            Console.WriteLine($"Sum: {sum}");
-            Console.WriteLine($"Difference: {difference}");
-            Console.WriteLine($"Product: {product}");
+            Console.WriteLine("\n======================================");
+            Console.WriteLine("           РЕЗУЛЬТАТИ:");
+            Console.WriteLine("======================================");
+            Console.WriteLine($"Сума:     {num1} + {num2} = {sum}");
+            Console.WriteLine($"Різниця:  {num1} - {num2} = {difference}");
+            Console.WriteLine($"Добуток:  {num1} × {num2} = {product}");
 
             if (num2 != 0)
             {
                 double quotient = num1 / num2;
-                Console.WriteLine($"Share: {quotient}");
+                Console.WriteLine($"Частка:   {num1} ÷ {num2} = {quotient:F2}");
             }
             else
             {
-                Console.WriteLine("Division by zero is impossible!");
+                Console.WriteLine("Частка:   ПОМИЛКА! Ділення на нуль неможливе!");
             }
 
-            Console.WriteLine("\nPress any key to exit...");
+            Console.WriteLine("======================================");
+            Console.WriteLine("\nНатисніть будь-яку клавішу для виходу...");
             Console.ReadKey();
         }
     }
